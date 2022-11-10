@@ -16,4 +16,5 @@ jobs:
           port: ${{ secrets.PORT }}
           script: |
               cd ../pub/CMSC389T-Weebsite
+              echo "entering the matrix"
               git pull
