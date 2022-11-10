@@ -15,5 +15,5 @@ jobs:
           password: ${{ secrets.PASSWORD }}
           port: ${{ secrets.PORT }}
           script: |
-              cd CMSC389T-Weebsite
+              cd ../pub/CMSC389T-Weebsite
               git pull
