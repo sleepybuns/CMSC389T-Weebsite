@@ -3,9 +3,15 @@ version: '3'
 services:
   nodejs:
     #fill out the configuration here
+    build: 
+      context: .
+      dockerfile: Dockerfile
     networks:
       - app-network
-  
+    image: node:10-alpine
+    container_name: nodejs
+    restart: unless-stopped
+
   #the nginx configuration is given below
   #the website will run on localhost:80 
   webserver:
@@ -28,7 +34,7 @@ volumes:
     driver_opts:
       type: none
       #fill out your absolute path to your folder here
-      device: /absolute/path/to/web/template/folder
+      device: /Users/Vivian/CMSC389T-work/CMSC389T-Weebsite
       o: bind
 
 networks:
